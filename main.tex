@@ -1,0 +1,168 @@
+% Cristina_Sanchez_Lopez_CV_Overleaf.tex
+% Minimalist / Modern single-page CV
+% Overleaf-ready (LaTeX)
+\documentclass[8pt,a4paper]{article}
+% Margins (tight but clean)
+\usepackage[margin=0.9cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\renewcommand{\familydefault}{\sfdefault}
+% Tighter line spacing
+\usepackage{setspace}
+\setstretch{0.97}
+% Reduce space between paragraphs
+\usepackage{parskip}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2pt}
+% Section spacing
+\usepackage{titlesec}
+\titlespacing*{\section}{0pt}{3pt}{2pt}
+\titleformat{\section}
+  {\large\bfseries}
+  {}{0pt}{}
+  [\vspace{2pt}\color{gray!40}\titlerule]
+% Smaller spacing in lists and tables
+\usepackage{enumitem}
+\setlist{nosep}
+\setlength{\tabcolsep}{5pt}
+% Hyperlinks
+\usepackage[hidelinks]{hyperref}
+% TikZ for skillbars
+\usepackage{tikz}
+% Skill bars (thinner + shorter to save height)
+\newcommand{\skillbar}[3]{
+    \textbf{#1}\hspace{4pt}
+    \begin{tikzpicture}
+        \fill[#3] (0,0) rectangle (#2*2.0,0.14);
+        \draw[black] (0,0) rectangle (2.0,0.14);
+    \end{tikzpicture}
+}
+
+% Colors
+\usepackage{xcolor}
+\definecolor{skillpurple}{HTML}{6A5ACD}
+\definecolor{skillgreen}{HTML}{3CB371}
+
+% Language circles (smaller)
+\newcommand{\langcirclebar}[1]{
+    \foreach \i in {1,...,#1} {
+        \tikz \fill (0,0) circle (1.7pt);
+        \hspace{2pt}
+    }
+}
+% Better line spacing
+\usepackage{setspace}
+\setstretch{1.00}
+
+% Better section spacing
+\usepackage{titlesec}
+\titlespacing*{\section}{0pt}{6pt}{4pt}
+
+% Add subtle separation between sections
+\setlength{\parskip}{4pt}
+
+% Cleaner layout
+\geometry{margin=1.2cm}
+
+% Improve tables and minipage spacing
+\setlength{\tabcolsep}{6pt}
+
+\usepackage[hidelinks]{hyperref}
+
+\begin{document}
+\thispagestyle{empty}
+% Header
+{\LARGE\textbf{Cristina Sanchez Lopez}\\}
+{\normalsize\textit{System Architect Graduate}\\}
+{\small Göteborg \textbullet{} Hybrid / Remote \quad $\vert$ \quad Tel:  \quad $\vert$ \quad \href{}{}
+
+\vspace{6pt}
+% Profile
+\section{\textbf{PROFIL}}
+{\small Driven System Architect Graduate med passion för IT, systemutveckling och data. Jag brinner för att skapa smarta, användarvänliga och framtidssäkra digitala tjänster. Med en bred teknisk grund, ett analytiskt angreppssätt och viljan att fortsätta utvecklas inom systemutveckling och IT, söker jag möjligheter där jag kan bidra, lära och växa.}\\
+\vspace{6pt}
+% Skills
+\section*{KOMPETENSER}
+\begin{tabular}{@{}p{0.30\textwidth}p{0.32\textwidth}p{0.32\textwidth}@{}}
+
+% ========================= COLUMN 1 =========================
+\begin{minipage}[t]{\linewidth}
+\textbf{Arbetssätt \& Metoder}\\[4pt]
+• Agilt arbete (Scrum) \\
+• Dokumentation \\
+• Felsökning \\
+• API-hantering \\
+• Databaser \\
+\end{minipage}
+&
+% ========================= COLUMN 2 =========================
+\begin{minipage}[t]{\linewidth}
+\textbf{Verktyg}\\[4pt]
+\skillbar{Git}{0.80}{skillgreen}\\[3pt]
+\skillbar{Visual Studio}{0.80}{skillgreen}\\[3pt]
+\skillbar{VS Code}{0.70}{skillgreen}\\[3pt]
+\skillbar{KNIME}{0.80}{skillgreen}\\[3pt]
+\skillbar{Android Studio}{0.35}{skillgreen}\\
+\end{minipage}
+&
+% ========================= COLUMN 3 =========================
+\begin{minipage}[t]{\linewidth}
+\textbf{Programmering}\\[4pt]
+\skillbar{C\#}{0.70}{skillpurple}\\[3pt]
+\skillbar{.NET}{0.70}{skillpurple}\\[3pt]
+\skillbar{SQL}{0.60}{skillpurple}\\[3pt]
+\skillbar{WPF}{0.60}{skillpurple}\\[3pt]
+\skillbar{Python}{0.45}{skillpurple}\\[3pt]
+\skillbar{Java}{0.40}{skillpurple}\\
+\end{minipage}
+\end{tabular}
+\vspace{2pt}
+% Education
+\section{\textbf{UTBILDNING}}
+{\small\textbf{Kandidatexamen i Systemarkitektur}, Högskolan i Borås (2019--2025)\\
+Bred kompetens inom system- och programutveckling; kurser i programmering, databaser, AI, webb- och mobilutveckling samt systemanalys. Examensarbete om användbarhet och säkerhet i lösenordshanterare.}\\
+\vspace{2pt}
+% Projects
+\section{\textbf{RELEVANTA AKADEMISKA PROJEKT}}
+{\small\textbf{Ski Resort Booking System} \hfill {\small (C\#, WPF)}\\
+Utvecklade ett desktop-bokningssystem med fokus på datalogik, struktur och användarvänlighet.}\\[6pt]
+{\small\textbf{Webbtjänst – Biobokningssystem} \hfill {\small (C\#, .NET, ASP.NET)}\\
+Utvecklade en webbtjänst för biobokning där användare kunde välja film och genomföra bokningar. Implementerade inloggning, CRUD-funktionalitet för film- och bokningsdata samt grundläggande sessionshantering och validering. Fokus på backend-logik, struktur och säkerhet.}\\[4pt]
+{\small\textbf{Android-applikation – Task Manager} \hfill {\small (Java, Android Studio)}\\
+Utvecklade en mobil applikation för att skapa, organisera och hantera uppgifter. Implementerade backend-logik för lagring (lokal databas), filtrering och task-CRUD. Arbetade iterativt med fokus på användarflöde och funktionalitet.}\\[4pt]
+{\small\textbf{Dataanalys \& Machine Learning – Sentiment Analysis} \hfill {\small (Python, KNIME)}}\\
+{Genomförde ett ML-projekt för sentimentanalys av produktrecensioner. Arbete inkluderade datarensning, feature-engineering, modellträning, utvärdering och visualisering av resultat.}\\
+\vspace{6pt}
+% Work Experience
+\section{\textbf{ARBETSLIVSERFARENHET}}
+{\small\textbf{Cafévagnen Öresund — Serveringspersonal} (2017--2020)\\
+Levererade hög service i en snabbrörlig miljö. Ansvarade för kundupplevelse, problemlösning, kassahantering och introduktion av nya medarbetare.\\
+\textit{Relevans för IT:} kund- och användarfokus, supportliknande arbete, kommunikation, ansvarstagande.}\\[4pt]
+{\small\textbf{Buenos Aires Restaurang — Kundrelationer \& försäljningsansvarig} (2017)\\
+Arbetade med bemötande, bokningar och kundärenden; ansvar för marknadsföring och kundrelationer.\\
+\textit{Relevans för IT:}  kravförståelse och kommunikation.}\\[4pt]
+{\small\textbf{Dorothy Tours — Bokningsagent} (2015--2017)\\
+B2B-kontakt, kundsupport, datainmatning och administration.\\
+\textit{Relevans för IT:} produktutveckling, datanoggrannhet, processhantering och kundbehovsanalys.}\\
+
+\vspace{8pt}
+% Certifications and Languages
+\section{Certifikat \& Språk}
+\begin{tabular}{@{}p{0.48\textwidth}p{0.48\textwidth}@{}}
+% ===== LEFT COLUMN =====
+\textbf{Certifikat } &
+\textbf{Språk} \\[6pt]
+• IBM Cybersecurity Fundamentals (2025) &
+\textbf{Svenska} \quad C2 \quad \langcirclebar{5}\\
+• IBM Web Development Fundamentals (2024) &
+\textbf{Engelska} \quad C2 \quad \langcirclebar{5}\\
+&
+\textbf{Spanska} \quad C2 \quad {\phantom{x}\footnotesize Modersmål} \\
+\end{tabular}
+
+\vspace{8pt}
+{\small\textbf{Referenser}: Lämnas på begäran.}
+
+
+\end{document}
